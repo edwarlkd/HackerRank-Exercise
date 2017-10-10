@@ -1,0 +1,29 @@
+
+/* 
+Input
+     1
+      \
+       2
+        \
+         5
+        /  \
+       3    6
+        \
+         4
+
+Output
+1 2 5 3 4 6
+     
+*/
+
+void preOrder(node *root) {
+    cout << root->data << " ";
+    
+    if(root->left != NULL){
+      preOrder(root->left);    
+    }
+    if(root->right != NULL){
+      preOrder(root->right);
+    }
+    
+}
