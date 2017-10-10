@@ -1,0 +1,28 @@
+/* 
+Input
+     1
+      \
+       2
+        \
+         5
+        /  \
+       3    6
+        \
+         4
+
+Output
+ 4 3 6 5 2 1 
+     
+*/
+
+void postOrder(node *root) {
+    
+    if(root->left != NULL){
+      postOrder(root->left);    
+    }
+    if(root->right != NULL){
+      postOrder(root->right);
+    }
+    
+    cout << root->data << " ";
+}
